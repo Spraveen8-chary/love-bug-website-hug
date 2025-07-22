@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, Star, Sparkles, Gift, Camera, MessageCircle } from "lucide-react";
+import { Heart, Star, Sparkles, Gift, Camera, MessageCircle, X } from "lucide-react";
 import loveHero from "@/assets/love-hero.jpg";
 import cuteHearts from "@/assets/cute-hearts.jpg";
 import loveMemories from "@/assets/love-memories.jpg";
+import teddyBearRose from "@/assets/teddy-bear-rose.jpg";
+import duduBubu1 from "@/assets/dudu-bubu-1.jpg";
+import duduBubu2 from "@/assets/dudu-bubu-2.jpg";
+import duduBubu3 from "@/assets/dudu-bubu-3.jpg";
 
 const Index = () => {
+  const [showApology, setShowApology] = useState(false);
+  const [showMemories, setShowMemories] = useState(false);
+
   const heartfeltMessages = [
     {
       title: "I'm Truly Sorry 😔",
@@ -48,6 +56,10 @@ const Index = () => {
     "All the moments I wish I could relive with you 💕"
   ];
 
+  const duduBubuImages = [duduBubu1, duduBubu2, duduBubu3];
+
+  const personalMessage = `Hello Kasturi, I know I have no right to message you again..not after what I said, kani I need to say this..nee mind ni Edo change cheyataniki kadhu..just truth. I'm so sorry for what I did, But adi nenu kadhu..nen ekkada ninnu purtiga lose ayita emo ani ana bhayam tho nen ala matladanu..and I never wanted to hurt the person I cared adore most..nenu edi ayite avvadhu anukunanno ade ayindi... you're always so precious to me..em jarigina jaragaka poyina..evaru ochina rakapoyina naa life.. you'll be always the first important..I'm so so sorry for what I did.. i never wanted to make you feel like i didn't respected your feelings or freedom..I'm just stupid around you. Nee deggara ela behave cheyalo kuda naku teliyadu antha istam nuv ante..kani nen nijam ga regret avutunna neetho ala behave chesinanduku.. i know this is not first time..but I'm willing to do anything that makes you forgive me..i always wanted to give you my best but i given you my worst, I'm so sorry for that..because all I wanted is to make happy the one person i adore most of my life and I was not the person i was .. I'll be the friend you will deserve this time.. i promise you that. I really do.i never really realised reality untill I completely lost it . Again..I'm sorry for what I did.. i regret it every second of my life. I want our friendship be stronger again..I'll be the friend you deserved from the first..I will be always with you..i never want to hurt you again..I want your forgiveness more than anything..I'm willing to do everything for it..`;
+
   return (
     <div className="min-h-screen gradient-soft">
       {/* Floating Hearts Background */}
@@ -82,11 +94,21 @@ const Index = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="love" size="lg" className="text-lg px-8 py-4">
+            <Button 
+              variant="love" 
+              size="lg" 
+              className="text-lg px-8 py-4"
+              onClick={() => setShowApology(!showApology)}
+            >
               <Heart className="w-5 h-5" />
               My Heartfelt Apology
             </Button>
-            <Button variant="loveOutline" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm">
+            <Button 
+              variant="loveOutline" 
+              size="lg" 
+              className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm"
+              onClick={() => setShowMemories(!showMemories)}
+            >
               <Camera className="w-5 h-5" />
               Our Precious Memories
             </Button>
@@ -94,8 +116,115 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Teddy Bear Apology Section */}
+      {showApology && (
+        <section className="py-20 px-6 bg-love-blush">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white"
+                onClick={() => setShowApology(false)}
+              >
+                <X className="w-6 h-6" />
+              </Button>
+              
+              <div className="love-card text-center">
+                <img 
+                  src={teddyBearRose} 
+                  alt="Teddy bear with rose" 
+                  className="w-64 h-64 mx-auto mb-8 rounded-full shadow-love animate-pulse-love object-cover"
+                />
+                
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-love-pink mb-6">
+                  My Deepest Apology to Kasturi 💔
+                </h2>
+                
+                <div className="bg-white/60 rounded-2xl p-8 shadow-soft mb-6">
+                  <p className="text-base md:text-lg text-foreground leading-relaxed text-left whitespace-pre-line">
+                    {personalMessage}
+                  </p>
+                </div>
+                
+                <div className="flex justify-center space-x-3 mb-6">
+                  <div className="text-3xl animate-bounce" style={{ animationDelay: '0s' }}>😔</div>
+                  <div className="text-3xl animate-bounce" style={{ animationDelay: '0.2s' }}>💔</div>
+                  <div className="text-3xl animate-bounce" style={{ animationDelay: '0.4s' }}>🙏</div>
+                  <div className="text-3xl animate-bounce" style={{ animationDelay: '0.6s' }}>💕</div>
+                </div>
+                
+                <p className="text-xl text-love-pink font-medium mb-4">
+                  I am feeling sorry for how I behaved
+                </p>
+                <p className="text-lg text-muted-foreground mb-2">I know I was wrong</p>
+                <p className="text-lg text-muted-foreground mb-2">I failed to be a good friend</p>
+                <p className="text-lg text-muted-foreground mb-4">The worst thing I did was texting that at the end - that will be my regret entirely</p>
+                <p className="text-lg text-love-pink font-medium">
+                  You are the most important person to me, and I want you to come back 💕
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Dudu Bubu Memories Section */}
+      {showMemories && (
+        <section className="py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 z-10 bg-white/80 hover:bg-white"
+                onClick={() => setShowMemories(false)}
+              >
+                <X className="w-6 h-6" />
+              </Button>
+              
+              <div className="love-card text-center">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-love-pink mb-8">
+                  Our Sweet Dudu Bubu Memories 🥰
+                </h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                  {duduBubuImages.map((image, index) => (
+                    <div key={index} className="love-card group">
+                      <img 
+                        src={image} 
+                        alt={`Dudu Bubu ${index + 1}`}
+                        className="w-full h-64 object-cover rounded-2xl shadow-soft group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="mt-4">
+                        <div className="text-2xl mb-2">💕</div>
+                        <p className="text-love-pink font-medium">
+                          {index === 0 && "Us Together 🤗"}
+                          {index === 1 && "Holding Hands 👫"} 
+                          {index === 2 && "Sharing Hearts 💖"}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="bg-love-blush rounded-2xl p-6">
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                    These cute characters remind me of us - how we used to care for each other, 
+                    support one another, and share beautiful moments together. 
+                  </p>
+                  <p className="text-love-pink font-medium">
+                    I miss being your Dudu, and I hope I can be again someday 🥺💕
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Love Messages Section */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6">{showApology || showMemories ? '' : ''}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <img 
