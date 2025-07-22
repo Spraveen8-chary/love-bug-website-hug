@@ -6,46 +6,46 @@ import cuteHearts from "@/assets/cute-hearts.jpg";
 import loveMemories from "@/assets/love-memories.jpg";
 
 const Index = () => {
-  const loveMessages = [
+  const heartfeltMessages = [
     {
-      title: "You're My Sunshine ☀️",
-      message: "Every day with you feels like a warm, bright morning. You light up my world in ways I never knew were possible.",
-      emoji: "🌞"
+      title: "I'm Truly Sorry 😔",
+      message: "I know I made mistakes that hurt you, and I carry that regret every day. I'm genuinely sorry for the pain I caused and the trust I broke.",
+      emoji: "😢"
     },
     {
-      title: "Forever & Always 💕",
-      message: "In a world full of temporary things, you are my constant. My heart beats for you, today and always.",
+      title: "You Mean Everything 💕",
+      message: "I've realized how much you mean to me. Your friendship, your presence in my life - it made everything better, and I miss it terribly.",
       emoji: "💖"
     },
     {
-      title: "My Safe Haven 🏠",
-      message: "In your arms, I found my home. With you, I can be completely myself, loved and accepted.",
-      emoji: "🤗"
+      title: "I Miss Us 🌟",
+      message: "I miss our conversations, our laughs, the way we understood each other. I miss having you as my friend, my confidant, my person.",
+      emoji: "🥺"
     },
     {
-      title: "You're Amazing 🌟",
-      message: "Your kindness, your smile, your gentle soul - everything about you makes my heart skip a beat.",
+      title: "I've Changed 🌱",
+      message: "I've taken time to reflect on my actions and work on myself. I'm not the same person who hurt you - I'm trying to be better every day.",
+      emoji: "🌱"
+    },
+    {
+      title: "Give Me a Chance? 🙏",
+      message: "I'm not asking for everything to go back to how it was instantly. I just want a chance to show you I've changed and earn your trust again.",
+      emoji: "🤞"
+    },
+    {
+      title: "You're Special 🌟",
+      message: "In all my life, I've never met someone like you. Your kindness, intelligence, and beautiful soul - you're irreplaceable to me.",
       emoji: "✨"
-    },
-    {
-      title: "Thank You 🙏",
-      message: "Thank you for choosing me, for loving me, for being patient with me. You make me want to be better every day.",
-      emoji: "💝"
-    },
-    {
-      title: "Sweet Dreams 🌙",
-      message: "Every night I fall asleep grateful for you, and every morning I wake up excited to love you more.",
-      emoji: "🌙"
     }
   ];
 
   const memories = [
-    "Our first date 💑",
-    "That funny moment when we both... 😂",
-    "Our favorite song together 🎵",
-    "That time we got lost but found each other 🗺️",
-    "Our inside jokes that no one else gets 🤫",
-    "All the little things that make us 'us' 💕"
+    "The first time we talked and clicked instantly 💬",
+    "All those late night conversations that meant everything 🌙", 
+    "When you helped me through tough times 🤗",
+    "Our shared interests and dreams we talked about ✨",
+    "The way you always understood me like no one else 💭",
+    "All the moments I wish I could relive with you 💕"
   ];
 
   return (
@@ -71,24 +71,24 @@ const Index = () => {
           <div className="mb-8">
             <Heart className="w-16 h-16 text-love-pink animate-pulse-love mx-auto mb-4" />
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-              For My Beautiful
-              <span className="text-love-pink block">Love</span>
+              I'm Sorry &
+              <span className="text-love-pink block">Miss You</span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed drop-shadow-md">
-              This little corner of the internet is dedicated to you, 
+              I made this to share my feelings, apologize for my mistakes,
               <br className="hidden md:block" />
-              the most wonderful person in my world
+              and ask for a chance to make things right between us
             </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="love" size="lg" className="text-lg px-8 py-4">
               <Heart className="w-5 h-5" />
-              Read My Messages
+              My Heartfelt Apology
             </Button>
             <Button variant="loveOutline" size="lg" className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm">
               <Camera className="w-5 h-5" />
-              Our Memories
+              Our Precious Memories
             </Button>
           </div>
         </div>
@@ -104,15 +104,15 @@ const Index = () => {
               className="w-24 h-24 mx-auto mb-6 rounded-full shadow-love animate-pulse-love"
             />
             <h2 className="font-display text-4xl md:text-5xl font-bold text-love-pink mb-4">
-              Messages from My Heart
+              From My Heart to Yours
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Every word written with love, every message crafted with care
+              These are my honest feelings, my regrets, and my hopes for us
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {loveMessages.map((msg, index) => (
+            {heartfeltMessages.map((msg, index) => (
               <Card key={index} className="love-card group cursor-pointer">
                 <div className="text-center mb-4">
                   <div className="text-4xl mb-2 group-hover:animate-bounce">
@@ -139,10 +139,10 @@ const Index = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-love-pink mb-4">
-              Our Beautiful Memories
+              The Memories We Shared
             </h2>
             <p className="text-xl text-muted-foreground">
-              Every moment with you is a treasure I hold close to my heart
+              These moments meant the world to me, and I hope they did to you too
             </p>
           </div>
 
@@ -175,13 +175,13 @@ const Index = () => {
           <div className="love-card">
             <Gift className="w-16 h-16 text-love-pink mx-auto mb-6 animate-pulse-love" />
             <h2 className="font-display text-3xl md:text-4xl font-bold text-love-pink mb-6">
-              You Are My Everything
+              Can We Try Again?
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              This website is just a small token of my love for you. 
-              Words can never fully capture how much you mean to me, but I hope this gives you a glimpse 
-              into the depth of my feelings. You make every day brighter, every moment more meaningful, 
-              and every dream more beautiful.
+              I know I hurt you, and I know trust isn't easily rebuilt. But you mean too much to me to give up without trying. 
+              I've learned from my mistakes, I've grown as a person, and I'm ready to do whatever it takes to earn your 
+              friendship back. Even if we can't be what we once were, I hope we can find a way to be in each other's lives again. 
+              You deserve the world, and I want to be better for you.
             </p>
             <div className="flex justify-center space-x-2 mb-8">
               <Heart className="w-6 h-6 text-love-pink animate-pulse-love" />
@@ -190,7 +190,7 @@ const Index = () => {
             </div>
             <Button variant="love" size="lg" className="text-lg px-12 py-4">
               <MessageCircle className="w-5 h-5" />
-              I Love You More Every Day
+              Please Give Me Another Chance
             </Button>
           </div>
         </div>
@@ -200,7 +200,7 @@ const Index = () => {
       <footer className="py-12 px-6 text-center">
         <div className="max-w-2xl mx-auto">
           <p className="text-muted-foreground mb-4">
-            Made with 💕 for the most amazing person in the world
+            Made with hope, regret, and love for someone I never want to lose
           </p>
           <div className="flex justify-center space-x-4">
             <Heart className="w-5 h-5 text-love-pink" />
