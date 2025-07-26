@@ -20,6 +20,8 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         love: "gradient-love text-primary-foreground hover:scale-105 transition-love shadow-soft hover:shadow-love rounded-full font-medium",
         loveOutline: "border-2 border-love-pink text-love-pink hover:gradient-love hover:text-primary-foreground transition-love rounded-full font-medium hover:scale-105",
+        night: "gradient-night text-primary-foreground hover:scale-105 transition-love shadow-soft hover:shadow-moon rounded-full font-medium",
+        nightOutline: "border-2 border-moon-blue text-moon-blue hover:gradient-night hover:text-primary-foreground transition-love rounded-full font-medium hover:scale-105",
       },
       size: {
         default: "h-10 px-4 py-2",

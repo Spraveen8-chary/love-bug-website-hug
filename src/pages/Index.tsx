@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Heart, Star, Sparkles, Gift, Camera, MessageCircle, X } from "lucide-react";
+import { Moon, Star, Sparkles, Gift, Camera, MessageCircle, X } from "lucide-react";
 import loveHero from "@/assets/love-hero.jpg";
 import cuteHearts from "@/assets/cute-hearts.jpg";
 import loveMemories from "@/assets/love-memories.jpg";
@@ -62,12 +62,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen gradient-soft">
-      {/* Floating Hearts Background */}
+      {/* Floating Stars Background */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="floating-hearts absolute top-10 left-10 w-20 h-20"></div>
-        <div className="floating-hearts absolute top-32 right-20 w-16 h-16"></div>
-        <div className="floating-hearts absolute bottom-32 left-1/4 w-24 h-24"></div>
-        <div className="floating-hearts absolute bottom-20 right-1/3 w-18 h-18"></div>
+        <div className="floating-stars absolute top-10 left-10 w-20 h-20"></div>
+        <div className="floating-stars absolute top-32 right-20 w-16 h-16"></div>
+        <div className="floating-stars absolute bottom-32 left-1/4 w-24 h-24"></div>
+        <div className="floating-stars absolute bottom-20 right-1/3 w-18 h-18"></div>
       </div>
 
       {/* Hero Section */}
@@ -81,11 +81,19 @@ const Index = () => {
         
         <div className="relative z-10 text-center px-6 max-w-4xl">
           <div className="mb-8">
-            <Heart className="w-16 h-16 text-love-pink animate-pulse-love mx-auto mb-4" />
+            <Moon className="w-16 h-16 text-moon-blue animate-pulse-moon mx-auto mb-4" />
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg">
               I'm Sorry &
-              <span className="text-love-pink block">Miss You</span>
+              <span className="text-moon-blue block">Miss You</span>
             </h1>
+            
+            {/* Personal Message Block */}
+            <div className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 mb-8 border border-white/30 max-w-4xl mx-auto">
+              <p className="text-lg md:text-xl text-white leading-relaxed text-left whitespace-pre-line">
+                Hello kasturi, i know I have no right to message you again..not after what I said, kani I need to say this..nee mind ni Edo change cheyataniki kadhu..just truth. I'm so sorry for what I did, But adi nenu kadhu..nen ekkada ninnu purtiga lose ayita emo ani ana bhayam tho nen ala matladanu..and I never wanted to hurt the person I cared adore most..nenu edi ayite avvadhu anukunanno ade ayindi... you're always so precious to me..em jarigina jaragaka poyina..evaru ochina rakapoyina naa life.. you'll be always the first important..I'm so so sorry for what I did.. i never wanted to make you feel like i didn't respected your feelings or freedom..I'm just stupid around you. Nee deggara ela behave cheyalo kuda naku teliyadu antha istam nuv ante..kani nen nijam ga regret avutunna neetho ala behave chesinanduku.. i know this is not first time..but I'm willing to do anything that makes you forgive me..i always wanted to give you my best but i given you my worst, I'm so sorry for that..because all I wanted is to make happy the one person i adore most of my life and I was not the person i was .. I'll be the friend you will deserve this time.. i promise you that. I really do.i never really realised reality untill I completely lost it . Again..I'm sorry for what I did.. i regret it every second of my life.
+              </p>
+            </div>
+            
             <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed drop-shadow-md">
               I made this to share my feelings, apologize for my mistakes,
               <br className="hidden md:block" />
@@ -95,19 +103,19 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
-              variant="love" 
+              variant="night" 
               size="lg" 
               className="text-lg px-8 py-4"
-              onClick={() => setShowApology(!showApology)}
+              onClick={() => setShowApology(true)}
             >
-              <Heart className="w-5 h-5" />
+              <Moon className="w-5 h-5" />
               My Heartfelt Apology
             </Button>
             <Button 
-              variant="loveOutline" 
+              variant="nightOutline" 
               size="lg" 
               className="text-lg px-8 py-4 bg-white/10 backdrop-blur-sm"
-              onClick={() => setShowMemories(!showMemories)}
+              onClick={() => setShowMemories(true)}
             >
               <Camera className="w-5 h-5" />
               Our Precious Memories
@@ -118,7 +126,7 @@ const Index = () => {
 
       {/* Teddy Bear Apology Section */}
       {showApology && (
-        <section className="py-20 px-6 bg-love-blush">
+        <section className="py-20 px-6 bg-night-soft">
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               <Button
@@ -130,15 +138,15 @@ const Index = () => {
                 <X className="w-6 h-6" />
               </Button>
               
-              <div className="love-card text-center">
+              <div className="night-card text-center">
                 <img 
                   src={teddyBearRose} 
                   alt="Teddy bear with rose" 
-                  className="w-64 h-64 mx-auto mb-8 rounded-full shadow-love animate-pulse-love object-cover"
+                  className="w-64 h-64 mx-auto mb-8 rounded-full shadow-moon animate-pulse-moon object-cover"
                 />
                 
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-love-pink mb-6">
-                  My Deepest Apology to Kasturi 💔
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-moon-blue mb-6">
+                  My Deepest Apology to Kasturi 🌙💔
                 </h2>
                 
                 <div className="bg-white/60 rounded-2xl p-8 shadow-soft mb-6">
@@ -154,14 +162,14 @@ const Index = () => {
                   <div className="text-3xl animate-bounce" style={{ animationDelay: '0.6s' }}>💕</div>
                 </div>
                 
-                <p className="text-xl text-love-pink font-medium mb-4">
+                <p className="text-xl text-moon-blue font-medium mb-4">
                   I am feeling sorry for how I behaved
                 </p>
                 <p className="text-lg text-muted-foreground mb-2">I know I was wrong</p>
                 <p className="text-lg text-muted-foreground mb-2">I failed to be a good friend</p>
                 <p className="text-lg text-muted-foreground mb-4">The worst thing I did was texting that at the end - that will be my regret entirely</p>
-                <p className="text-lg text-love-pink font-medium">
-                  You are the most important person to me, and I want you to come back 💕
+                <p className="text-lg text-moon-blue font-medium">
+                  You are the most important person to me, and I want you to come back 🌙💕
                 </p>
               </div>
             </div>
@@ -183,14 +191,14 @@ const Index = () => {
                 <X className="w-6 h-6" />
               </Button>
               
-              <div className="love-card text-center">
-                <h2 className="font-display text-3xl md:text-4xl font-bold text-love-pink mb-8">
-                  Our Sweet Dudu Bubu Memories 🥰
+              <div className="night-card text-center">
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-moon-blue mb-8">
+                  Our Sweet Dudu Bubu Memories 🌙🥰
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                   {duduBubuImages.map((image, index) => (
-                    <div key={index} className="love-card group">
+                    <div key={index} className="night-card group">
                       <img 
                         src={image} 
                         alt={`Dudu Bubu ${index + 1}`}
@@ -198,7 +206,7 @@ const Index = () => {
                       />
                       <div className="mt-4">
                         <div className="text-2xl mb-2">💕</div>
-                        <p className="text-love-pink font-medium">
+                        <p className="text-moon-blue font-medium">
                           {index === 0 && "Us Together 🤗"}
                           {index === 1 && "Holding Hands 👫"} 
                           {index === 2 && "Sharing Hearts 💖"}
@@ -208,13 +216,13 @@ const Index = () => {
                   ))}
                 </div>
                 
-                <div className="bg-love-blush rounded-2xl p-6">
+                <div className="bg-night-soft rounded-2xl p-6">
                   <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                     These cute characters remind me of us - how we used to care for each other, 
                     support one another, and share beautiful moments together. 
                   </p>
-                  <p className="text-love-pink font-medium">
-                    I miss being your Dudu, and I hope I can be again someday 🥺💕
+                  <p className="text-moon-blue font-medium">
+                    I miss being your Dudu, and I hope I can be again someday 🌙🥺💕
                   </p>
                 </div>
               </div>
@@ -230,9 +238,9 @@ const Index = () => {
             <img 
               src={cuteHearts} 
               alt="Cute hearts" 
-              className="w-24 h-24 mx-auto mb-6 rounded-full shadow-love animate-pulse-love"
+              className="w-24 h-24 mx-auto mb-6 rounded-full shadow-moon animate-pulse-moon"
             />
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-love-pink mb-4">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-moon-blue mb-4">
               From My Heart to Yours
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -242,12 +250,12 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {heartfeltMessages.map((msg, index) => (
-              <Card key={index} className="love-card group cursor-pointer">
+              <Card key={index} className="night-card group cursor-pointer">
                 <div className="text-center mb-4">
                   <div className="text-4xl mb-2 group-hover:animate-bounce">
                     {msg.emoji}
                   </div>
-                  <h3 className="font-display text-2xl font-semibold text-love-pink mb-3">
+                  <h3 className="font-display text-2xl font-semibold text-moon-blue mb-3">
                     {msg.title}
                   </h3>
                 </div>
@@ -255,7 +263,7 @@ const Index = () => {
                   {msg.message}
                 </p>
                 <div className="flex justify-center mt-6">
-                  <Sparkles className="w-6 h-6 text-love-purple opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <Sparkles className="w-6 h-6 text-night-purple opacity-50 group-hover:opacity-100 transition-opacity" />
                 </div>
               </Card>
             ))}
@@ -264,10 +272,10 @@ const Index = () => {
       </section>
 
       {/* Memories Section */}
-      <section className="py-20 px-6 bg-love-blush">
+      <section className="py-20 px-6 bg-night-soft">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-love-pink mb-4">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-moon-blue mb-4">
               The Memories We Shared
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -279,13 +287,13 @@ const Index = () => {
             <img 
               src={loveMemories} 
               alt="Our memories" 
-              className="w-full rounded-3xl shadow-love mb-12"
+              className="w-full rounded-3xl shadow-moon mb-12"
             />
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {memories.map((memory, index) => (
-                <div key={index} className="flex items-center space-x-4 love-card">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full gradient-love flex items-center justify-center">
+                <div key={index} className="flex items-center space-x-4 night-card">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full gradient-night flex items-center justify-center">
                     <Star className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
@@ -301,9 +309,9 @@ const Index = () => {
       {/* Final Love Note */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="love-card">
-            <Gift className="w-16 h-16 text-love-pink mx-auto mb-6 animate-pulse-love" />
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-love-pink mb-6">
+          <div className="night-card">
+            <Gift className="w-16 h-16 text-moon-blue mx-auto mb-6 animate-pulse-moon" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-moon-blue mb-6">
               Can We Try Again?
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -313,11 +321,11 @@ const Index = () => {
               You deserve the world, and I want to be better for you.
             </p>
             <div className="flex justify-center space-x-2 mb-8">
-              <Heart className="w-6 h-6 text-love-pink animate-pulse-love" />
-              <Heart className="w-6 h-6 text-love-rose animate-pulse-love" style={{ animationDelay: '0.5s' }} />
-              <Heart className="w-6 h-6 text-love-purple animate-pulse-love" style={{ animationDelay: '1s' }} />
+              <Moon className="w-6 h-6 text-moon-blue animate-pulse-moon" />
+              <Star className="w-6 h-6 text-star-yellow animate-pulse-moon" style={{ animationDelay: '0.5s' }} />
+              <Sparkles className="w-6 h-6 text-night-purple animate-pulse-moon" style={{ animationDelay: '1s' }} />
             </div>
-            <Button variant="love" size="lg" className="text-lg px-12 py-4">
+            <Button variant="night" size="lg" className="text-lg px-12 py-4">
               <MessageCircle className="w-5 h-5" />
               Please Give Me Another Chance
             </Button>
@@ -332,9 +340,9 @@ const Index = () => {
             Made with hope, regret, and love for someone I never want to lose
           </p>
           <div className="flex justify-center space-x-4">
-            <Heart className="w-5 h-5 text-love-pink" />
-            <Sparkles className="w-5 h-5 text-love-purple" />
-            <Star className="w-5 h-5 text-love-rose" />
+            <Moon className="w-5 h-5 text-moon-blue" />
+            <Sparkles className="w-5 h-5 text-night-purple" />
+            <Star className="w-5 h-5 text-star-yellow" />
           </div>
         </div>
       </footer>

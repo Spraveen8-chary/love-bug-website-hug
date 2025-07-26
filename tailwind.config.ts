@@ -62,11 +62,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				love: {
-					pink: 'hsl(var(--love-pink))',
-					purple: 'hsl(var(--love-purple))',
-					rose: 'hsl(var(--love-rose))',
-					blush: 'hsl(var(--love-blush))'
+				night: {
+					blue: 'hsl(var(--moon-blue))',
+					purple: 'hsl(var(--night-purple))',
+					soft: 'hsl(var(--night-soft))'
+				},
+				moon: {
+					blue: 'hsl(var(--moon-blue))'
+				},
+				star: {
+					yellow: 'hsl(var(--star-yellow))'
 				}
 			},
 			fontFamily: {
@@ -110,6 +115,10 @@ export default {
 				'pulse-love': {
 					'0%, 100%': { transform: 'scale(1)', opacity: '1' },
 					'50%': { transform: 'scale(1.1)', opacity: '0.8' }
+				},
+				'pulse-moon': {
+					'0%, 100%': { transform: 'scale(1)', opacity: '1' },
+					'50%': { transform: 'scale(1.05)', opacity: '0.8' }
 				}
 			},
 			animation: {
@@ -117,7 +126,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float-heart-1': 'float-heart-1 6s ease-in-out infinite',
 				'float-heart-2': 'float-heart-2 8s ease-in-out infinite 2s',
-				'pulse-love': 'pulse-love 2s ease-in-out infinite'
+				'pulse-love': 'pulse-love 2s ease-in-out infinite',
+				'pulse-moon': 'pulse-moon 2s ease-in-out infinite'
 			}
 		}
 	},
